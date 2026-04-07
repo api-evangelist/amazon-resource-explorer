@@ -8,11 +8,11 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Resource Management
+  - AWS
   - Discovery
   - Inventory
   - Operations
-  - AWS
+  - Resource Management
 url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-resource-explorer/refs/heads/main/apis.yml
 created: '2026-03-16'
@@ -28,9 +28,9 @@ apis:
     humanURL: https://aws.amazon.com/resourceexplorer/
     baseURL: https://resource-explorer-2.amazonaws.com
     tags:
-      - Resource Management
       - Discovery
       - Inventory
+      - Resource Management
     properties:
       - type: Documentation
         url: https://docs.aws.amazon.com/resource-explorer/latest/apireference/Welcome.html
