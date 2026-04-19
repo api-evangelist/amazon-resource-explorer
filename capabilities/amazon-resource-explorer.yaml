@@ -1,0 +1,48 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon Resource Explorer Operations
+  description: Workflow capability for Amazon Resource Explorer. Enables automation of Amazon Resource Explorer resources for cloud operations teams.
+  tags:
+  - Amazon Resource Explorer
+  - AWS
+  - Cloud Operations
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY: AWS_ACCESS_KEY
+    AWS_SECRET_KEY: AWS_SECRET_KEY
+capability:
+  consumes:
+  - import: amazon-resource-explorer
+    location: ./shared/amazon-resource-explorer.yaml
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: amazon-resource-explorer-api
+    description: Unified REST API for Amazon Resource Explorer operations.
+    resources:
+    - path: /v1/resources
+      name: resources
+      description: Amazon Resource Explorer resources
+      operations:
+      - method: GET
+        name: list-resources
+        description: List Amazon Resource Explorer resources
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: amazon-resource-explorer-mcp
+    transport: http
+    description: MCP server for AI-assisted Amazon Resource Explorer operations.
+    tools:
+    - name: list-amazon-resource-explorer-resources
+      description: List Amazon Resource Explorer resources
+      hints:
+        readOnly: true
+      outputParameters:
+      - type: object
+        mapping: $.

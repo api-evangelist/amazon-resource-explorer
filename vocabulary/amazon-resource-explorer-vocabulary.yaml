@@ -1,0 +1,155 @@
+vocabulary: 1.0.0
+info:
+  provider: Amazon Resource Explorer
+  description: Vocabulary for Amazon Resource Explorer APIs covering operational and capability dimensions
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  apis:
+  - name: Amazon Resource Explorer
+    namespace: amazon-resource-explorer
+    status: active
+  resources:
+  - name: Search
+    api: amazon-resource-explorer-openapi
+    actions:
+    - Search
+  - name: GetIndex
+    api: amazon-resource-explorer-openapi
+    actions:
+    - GetIndex
+  - name: CreateIndex
+    api: amazon-resource-explorer-openapi
+    actions:
+    - CreateIndex
+  - name: DeleteIndex
+    api: amazon-resource-explorer-openapi
+    actions:
+    - DeleteIndex
+  - name: ListIndexes
+    api: amazon-resource-explorer-openapi
+    actions:
+    - ListIndexes
+  - name: CreateView
+    api: amazon-resource-explorer-openapi
+    actions:
+    - CreateView
+  - name: DeleteView
+    api: amazon-resource-explorer-openapi
+    actions:
+    - DeleteView
+  - name: GetView
+    api: amazon-resource-explorer-openapi
+    actions:
+    - GetView
+  - name: ListViews
+    api: amazon-resource-explorer-openapi
+    actions:
+    - ListViews
+  - name: BatchGetView
+    api: amazon-resource-explorer-openapi
+    actions:
+    - BatchGetView
+  - name: ListSupportedResourceTypes
+    api: amazon-resource-explorer-openapi
+    actions:
+    - ListSupportedResourceTypes
+  - name: ListTagsForResource
+    api: amazon-resource-explorer-openapi
+    actions:
+    - ListTagsForResource
+  - name: TagResource
+    api: amazon-resource-explorer-openapi
+    actions:
+    - TagResource
+  - name: UntagResource
+    api: amazon-resource-explorer-openapi
+    actions:
+    - UntagResource
+  actions:
+  - name: post
+    httpMethod: POST
+    pattern: write
+  - name: create
+    httpMethod: POST
+    pattern: write
+  - name: delete
+    httpMethod: POST
+    pattern: write
+  - name: list
+    httpMethod: POST
+    pattern: write
+  schemas:
+    core:
+    - amazon-resource-explorer-openapi-index
+    - amazon-resource-explorer-openapi-resource
+    - amazon-resource-explorer-openapi-search-request
+    - amazon-resource-explorer-openapi-search-response
+    - amazon-resource-explorer-openapi-view
+  authentication:
+    schemes:
+    - type: bearer
+      description: AWS Signature V4
+capability:
+  workflows:
+  - name: Amazon Resource Explorer Operations
+    file: capabilities/amazon-resource-explorer.yaml
+    description: Automation workflow for Amazon Resource Explorer
+  personas:
+  - id: cloud-engineer
+    name: Cloud Engineer
+    description: Engineer managing Amazon Resource Explorer resources
+  domains:
+  - name: Cloud Operations
+    description: AWS cloud resource management
+crossReference:
+- resource: Search
+  operations:
+  - Search
+  workflows:
+  - Amazon Resource Explorer Operations
+- resource: GetIndex
+  operations:
+  - GetIndex
+  workflows:
+  - Amazon Resource Explorer Operations
+- resource: CreateIndex
+  operations:
+  - CreateIndex
+  workflows:
+  - Amazon Resource Explorer Operations
+- resource: DeleteIndex
+  operations:
+  - DeleteIndex
+  workflows:
+  - Amazon Resource Explorer Operations
+- resource: ListIndexes
+  operations:
+  - ListIndexes
+  workflows:
+  - Amazon Resource Explorer Operations
+- resource: CreateView
+  operations:
+  - CreateView
+  workflows:
+  - Amazon Resource Explorer Operations
+- resource: DeleteView
+  operations:
+  - DeleteView
+  workflows:
+  - Amazon Resource Explorer Operations
+- resource: GetView
+  operations:
+  - GetView
+  workflows:
+  - Amazon Resource Explorer Operations
+- resource: ListViews
+  operations:
+  - ListViews
+  workflows:
+  - Amazon Resource Explorer Operations
+- resource: BatchGetView
+  operations:
+  - BatchGetView
+  workflows:
+  - Amazon Resource Explorer Operations

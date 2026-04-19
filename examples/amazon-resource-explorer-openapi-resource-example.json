@@ -1,0 +1,8 @@
+{
+  "Arn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "LastReportedAt": "2026-04-19T00:00:00Z",
+  "OwningAccountId": "abc123",
+  "Region": "us-east-1",
+  "ResourceType": "example-value",
+  "Service": "example-value"
+}

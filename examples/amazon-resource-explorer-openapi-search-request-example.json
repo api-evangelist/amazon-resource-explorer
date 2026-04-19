@@ -1,0 +1,6 @@
+{
+  "QueryString": "example-value",
+  "MaxResults": 100,
+  "NextToken": "example-value",
+  "ViewArn": "arn:aws:service:us-east-1:123456789012:resource/example"
+}

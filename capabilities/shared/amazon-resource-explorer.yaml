@@ -1,0 +1,191 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon Resource Explorer API
+  description: AWS Resource Explorer is a resource search and discovery service that provides a unified view of your AWS resources across Regions.
+  tags:
+  - Amazon Resource Explorer
+  - AWS
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_RESOURCE_EXPLORER_API_KEY: AMAZON_RESOURCE_EXPLORER_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-resource-explorer
+    baseUri: https://resource-explorer-2.{region}.amazonaws.com
+    description: Amazon Resource Explorer API
+    authentication:
+      type: bearer
+      token: '{{AWS_ACCESS_KEY}}'
+    resources:
+    - name: Search
+      path: /Search
+      description: Search operations
+      operations:
+      - name: Search
+        method: POST
+        description: Search Resources
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: GetIndex
+      path: /GetIndex
+      description: GetIndex operations
+      operations:
+      - name: GetIndex
+        method: POST
+        description: Get Index
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: CreateIndex
+      path: /CreateIndex
+      description: CreateIndex operations
+      operations:
+      - name: CreateIndex
+        method: POST
+        description: Create Index
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: DeleteIndex
+      path: /DeleteIndex
+      description: DeleteIndex operations
+      operations:
+      - name: DeleteIndex
+        method: POST
+        description: Delete Index
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: ListIndexes
+      path: /ListIndexes
+      description: ListIndexes operations
+      operations:
+      - name: ListIndexes
+        method: POST
+        description: List Indexes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: CreateView
+      path: /CreateView
+      description: CreateView operations
+      operations:
+      - name: CreateView
+        method: POST
+        description: Create View
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: DeleteView
+      path: /DeleteView
+      description: DeleteView operations
+      operations:
+      - name: DeleteView
+        method: POST
+        description: Delete View
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: GetView
+      path: /GetView
+      description: GetView operations
+      operations:
+      - name: GetView
+        method: POST
+        description: Get View
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: ListViews
+      path: /ListViews
+      description: ListViews operations
+      operations:
+      - name: ListViews
+        method: POST
+        description: List Views
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: BatchGetView
+      path: /BatchGetView
+      description: BatchGetView operations
+      operations:
+      - name: BatchGetView
+        method: POST
+        description: Batch Get View
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: ListSupportedResourceTypes
+      path: /ListSupportedResourceTypes
+      description: ListSupportedResourceTypes operations
+      operations:
+      - name: ListSupportedResourceTypes
+        method: POST
+        description: List Supported Resource Types
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: ListTagsForResource
+      path: /ListTagsForResource/{resourceArn}
+      description: ListTagsForResource operations
+      operations:
+      - name: ListTagsForResource
+        method: GET
+        description: List Tags for Resource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: TagResource
+      path: /TagResource/{resourceArn}
+      description: TagResource operations
+      operations:
+      - name: TagResource
+        method: POST
+        description: Tag Resource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: UntagResource
+      path: /UntagResource/{resourceArn}
+      description: UntagResource operations
+      operations:
+      - name: UntagResource
+        method: DELETE
+        description: Untag Resource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.

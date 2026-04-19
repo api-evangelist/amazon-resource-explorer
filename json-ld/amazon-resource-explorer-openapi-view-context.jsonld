@@ -1,0 +1,23 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "aws": "https://aws.amazon.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "View": "aws:View",
+    "Filters": {
+      "@id": "aws:Filters",
+      "@type": "xsd:string"
+    },
+    "IncludedProperties": {
+      "@id": "aws:IncludedProperties",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "ViewArn": {
+      "@id": "aws:ViewArn",
+      "@type": "xsd:string"
+    }
+  }
+}

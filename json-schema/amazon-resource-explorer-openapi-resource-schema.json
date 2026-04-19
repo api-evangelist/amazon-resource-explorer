@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-resource-explorer/refs/heads/main/json-schema/amazon-resource-explorer-openapi-resource-schema.json",
+  "title": "Resource",
+  "description": "Resource schema from openapi",
+  "type": "object",
+  "properties": {
+    "Arn": {
+      "type": "string",
+      "description": "The Amazon Resource Name (ARN) of the resource."
+    },
+    "LastReportedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date and time the resource was last updated."
+    },
+    "OwningAccountId": {
+      "type": "string",
+      "description": "The AWS account ID of the account that owns the resource."
+    },
+    "Region": {
+      "type": "string",
+      "description": "The AWS Region where the resource exists."
+    },
+    "ResourceType": {
+      "type": "string",
+      "description": "The type of the resource."
+    },
+    "Service": {
+      "type": "string",
+      "description": "The AWS service that owns the resource."
+    }
+  }
+}

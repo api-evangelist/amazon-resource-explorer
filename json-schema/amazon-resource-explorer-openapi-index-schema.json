@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-resource-explorer/refs/heads/main/json-schema/amazon-resource-explorer-openapi-index-schema.json",
+  "title": "Index",
+  "description": "Index schema from openapi",
+  "type": "object",
+  "properties": {
+    "Arn": {
+      "type": "string",
+      "description": "The ARN of the index."
+    },
+    "Region": {
+      "type": "string",
+      "description": "The AWS Region where the index exists."
+    },
+    "Type": {
+      "type": "string",
+      "enum": [
+        "LOCAL",
+        "AGGREGATOR"
+      ],
+      "description": "The type of the index."
+    }
+  }
+}

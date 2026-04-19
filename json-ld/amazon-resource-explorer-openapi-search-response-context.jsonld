@@ -1,0 +1,27 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "aws": "https://aws.amazon.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "SearchResponse": "aws:SearchResponse",
+    "Count": {
+      "@id": "aws:Count",
+      "@type": "xsd:string"
+    },
+    "NextToken": {
+      "@id": "aws:NextToken",
+      "@type": "xsd:string"
+    },
+    "Resources": {
+      "@id": "aws:Resources",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "ViewArn": {
+      "@id": "aws:ViewArn",
+      "@type": "xsd:string"
+    }
+  }
+}
