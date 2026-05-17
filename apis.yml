@@ -69,15 +69,15 @@ common:
   url: https://health.aws.amazon.com/health/status
 - type: Contact
   url: https://aws.amazon.com/contact-us/
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/amazon-resource-explorer-openapi-index-context.jsonld
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/amazon-resource-explorer-openapi-resource-context.jsonld
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/amazon-resource-explorer-openapi-search-request-context.jsonld
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/amazon-resource-explorer-openapi-search-response-context.jsonld
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/amazon-resource-explorer-openapi-view-context.jsonld
 - type: JSONSchema
   url: json-schema/amazon-resource-explorer-openapi-index-schema.json
