@@ -1,10 +1,8 @@
 aid: amazon-resource-explorer
 name: Amazon Resource Explorer
-description: >-
-  AWS Resource Explorer is a resource search and discovery service. With
-  Resource Explorer, you can explore your resources across AWS Regions using
-  an internet search-like experience. It provides a unified view of your AWS
-  resources and helps you understand your resource inventory.
+description: AWS Resource Explorer is a resource search and discovery service. With Resource Explorer, you can explore your
+  resources across AWS Regions using an internet search-like experience. It provides a unified view of your AWS resources
+  and helps you understand your resource inventory.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
@@ -13,18 +11,15 @@ tags:
 - Inventory
 - Operations
 - Resource Management
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/amazon-resource-explorer/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/amazon-resource-explorer/refs/heads/main/apis.yml
 created: '2026-03-16'
-modified: '2026-04-19'
+modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
 - aid: amazon-resource-explorer:aws-resource-explorer-api
   name: AWS Resource Explorer API
-  description: >-
-    The AWS Resource Explorer API provides programmatic access to search and
-    discover AWS resources across Regions, manage indexes, views, and
-    resource type configurations for your AWS account.
+  description: The AWS Resource Explorer API provides programmatic access to search and discover AWS resources across Regions,
+    manage indexes, views, and resource type configurations for your AWS account.
   humanURL: https://aws.amazon.com/resourceexplorer/
   baseURL: https://resource-explorer-2.amazonaws.com
   tags:
@@ -42,6 +37,16 @@ apis:
     url: https://aws.amazon.com/resourceexplorer/pricing/
   - type: FAQ
     url: https://aws.amazon.com/resourceexplorer/faqs/
+  - type: NaftikoCapability
+    url: capabilities/amazon-resource-explorer-index.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-resource-explorer-resources.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-resource-explorer-search.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-resource-explorer-tags.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-resource-explorer-views.yaml
 common:
 - type: Portal
   url: https://aws.amazon.com/resourceexplorer/
@@ -109,10 +114,6 @@ common:
   url: examples/amazon-resource-explorer-openapi-search-response-example.json
 - type: Example
   url: examples/amazon-resource-explorer-openapi-view-example.json
-- type: NaftikoCapability
-  url: capabilities/amazon-resource-explorer.yaml
-- type: NaftikoCapability
-  url: capabilities/shared/amazon-resource-explorer.yaml
 - type: SpectralRules
   url: rules/amazon-resource-explorer-spectral-rules.yml
 - type: Vocabulary
@@ -122,14 +123,14 @@ common:
 - type: Integrations
   url: https://aws.amazon.com/partners/
 integrations:
-  - name: Partner Programs
-  - name: Resources
-  - name: Success Stories
-  - name: Work with an AWS Partner
-  - name: AWS Marketplace
-  - name: AWS Partner Central
-  - name: Partner Paths
-  - name: co-sell with AWS
+- name: Partner Programs
+- name: Resources
+- name: Success Stories
+- name: Work with an AWS Partner
+- name: AWS Marketplace
+- name: AWS Partner Central
+- name: Partner Paths
+- name: co-sell with AWS
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

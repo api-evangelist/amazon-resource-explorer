@@ -1,0 +1,210 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Amazon Resource Explorer API — Views
+  description: 'Amazon Resource Explorer API — Views. 5 operations. Lead operation: Batch Get View. Self-contained Naftiko
+    capability covering one Amazon Resource Explorer business surface.'
+  tags:
+  - Amazon Resource Explorer
+  - Views
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_RESOURCE_EXPLORER_API_KEY: AMAZON_RESOURCE_EXPLORER_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-resource-explorer-views
+    baseUri: https://resource-explorer-2.{region}.amazonaws.com
+    description: Amazon Resource Explorer API — Views business capability. Self-contained, no shared references.
+    resources:
+    - name: BatchGetView
+      path: /BatchGetView
+      operations:
+      - name: batchgetview
+        method: POST
+        description: Batch Get View
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: CreateView
+      path: /CreateView
+      operations:
+      - name: createview
+        method: POST
+        description: Create View
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: DeleteView
+      path: /DeleteView
+      operations:
+      - name: deleteview
+        method: POST
+        description: Delete View
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: GetView
+      path: /GetView
+      operations:
+      - name: getview
+        method: POST
+        description: Get View
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: ListViews
+      path: /ListViews
+      operations:
+      - name: listviews
+        method: POST
+        description: List Views
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_RESOURCE_EXPLORER_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-resource-explorer-views-rest
+    port: 8080
+    description: REST adapter for Amazon Resource Explorer API — Views. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/batchgetview
+      name: batchgetview
+      description: REST surface for BatchGetView.
+      operations:
+      - method: POST
+        name: batchgetview
+        description: Batch Get View
+        call: amazon-resource-explorer-views.batchgetview
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/createview
+      name: createview
+      description: REST surface for CreateView.
+      operations:
+      - method: POST
+        name: createview
+        description: Create View
+        call: amazon-resource-explorer-views.createview
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/deleteview
+      name: deleteview
+      description: REST surface for DeleteView.
+      operations:
+      - method: POST
+        name: deleteview
+        description: Delete View
+        call: amazon-resource-explorer-views.deleteview
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/getview
+      name: getview
+      description: REST surface for GetView.
+      operations:
+      - method: POST
+        name: getview
+        description: Get View
+        call: amazon-resource-explorer-views.getview
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/listviews
+      name: listviews
+      description: REST surface for ListViews.
+      operations:
+      - method: POST
+        name: listviews
+        description: List Views
+        call: amazon-resource-explorer-views.listviews
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-resource-explorer-views-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Amazon Resource Explorer API — Views. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: batch-get-view
+      description: Batch Get View
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: amazon-resource-explorer-views.batchgetview
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-view
+      description: Create View
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-resource-explorer-views.createview
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-view
+      description: Delete View
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-resource-explorer-views.deleteview
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-view
+      description: Get View
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: amazon-resource-explorer-views.getview
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-views
+      description: List Views
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: amazon-resource-explorer-views.listviews
+      outputParameters:
+      - type: object
+        mapping: $.

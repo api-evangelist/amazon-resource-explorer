@@ -1,0 +1,72 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Amazon Resource Explorer API — Resources
+  description: 'Amazon Resource Explorer API — Resources. 1 operations. Lead operation: List Supported Resource Types. Self-contained
+    Naftiko capability covering one Amazon Resource Explorer business surface.'
+  tags:
+  - Amazon Resource Explorer
+  - Resources
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_RESOURCE_EXPLORER_API_KEY: AMAZON_RESOURCE_EXPLORER_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-resource-explorer-resources
+    baseUri: https://resource-explorer-2.{region}.amazonaws.com
+    description: Amazon Resource Explorer API — Resources business capability. Self-contained, no shared references.
+    resources:
+    - name: ListSupportedResourceTypes
+      path: /ListSupportedResourceTypes
+      operations:
+      - name: listsupportedresourcetypes
+        method: POST
+        description: List Supported Resource Types
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_RESOURCE_EXPLORER_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-resource-explorer-resources-rest
+    port: 8080
+    description: REST adapter for Amazon Resource Explorer API — Resources. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/listsupportedresourcetypes
+      name: listsupportedresourcetypes
+      description: REST surface for ListSupportedResourceTypes.
+      operations:
+      - method: POST
+        name: listsupportedresourcetypes
+        description: List Supported Resource Types
+        call: amazon-resource-explorer-resources.listsupportedresourcetypes
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-resource-explorer-resources-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Amazon Resource Explorer API — Resources. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: list-supported-resource-types
+      description: List Supported Resource Types
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: amazon-resource-explorer-resources.listsupportedresourcetypes
+      outputParameters:
+      - type: object
+        mapping: $.
