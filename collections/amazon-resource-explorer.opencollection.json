@@ -1,0 +1,249 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Resource Explorer API",
+    "version": "Wed Jul 27 2022 20:00:00 GMT-0400 (Eastern Daylight Time)"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search Resources",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/Search",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Searches for resources using the Resource Explorer query syntax."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Index",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Index",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/GetIndex"
+          },
+          "docs": "Retrieves information about the aggregator index for the AWS Region."
+        },
+        {
+          "info": {
+            "name": "Create Index",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/CreateIndex",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates an index structure for the AWS Region."
+        },
+        {
+          "info": {
+            "name": "Delete Index",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/DeleteIndex",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Deletes the specified index and turns off AWS Resource Explorer for the Region."
+        },
+        {
+          "info": {
+            "name": "List Indexes",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/ListIndexes"
+          },
+          "docs": "Retrieves a list of all indexes in the AWS Region."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Views",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create View",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/CreateView",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a view with filters for Resource Explorer searches."
+        },
+        {
+          "info": {
+            "name": "Delete View",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/DeleteView"
+          },
+          "docs": "Deletes the specified view."
+        },
+        {
+          "info": {
+            "name": "Get View",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/GetView"
+          },
+          "docs": "Retrieves details of the specified view."
+        },
+        {
+          "info": {
+            "name": "List Views",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/ListViews"
+          },
+          "docs": "Lists all available views in the AWS Region."
+        },
+        {
+          "info": {
+            "name": "Batch Get View",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/BatchGetView"
+          },
+          "docs": "Retrieves details for a batch of views."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Resources",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Supported Resource Types",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/ListSupportedResourceTypes"
+          },
+          "docs": "Lists the resource types supported by Resource Explorer."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Tags",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Tags for Resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/ListTagsForResource/:resourceArn",
+            "params": [
+              {
+                "name": "resourceArn",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists the tags attached to the specified Resource Explorer resource."
+        },
+        {
+          "info": {
+            "name": "Tag Resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/TagResource/:resourceArn",
+            "params": [
+              {
+                "name": "resourceArn",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Adds one or more tag key and value pairs to the specified resource."
+        },
+        {
+          "info": {
+            "name": "Untag Resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/UntagResource/:resourceArn",
+            "params": [
+              {
+                "name": "resourceArn",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Removes one or more tag key and value pairs from the specified resource."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
