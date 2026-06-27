@@ -58,7 +58,7 @@ common:
     url: https://github.com/aws
   - type: Portal
     url: https://console.aws.amazon.com/resource-explorer/
-  - type: SignUp
+  - type: Signup
     url: https://portal.aws.amazon.com/billing/signup
   - type: Login
     url: https://signin.aws.amazon.com/
@@ -96,15 +96,15 @@ common:
     url: json-structure/amazon-resource-explorer-openapi-search-response-structure.json
   - type: JSONStructure
     url: json-structure/amazon-resource-explorer-openapi-view-structure.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-resource-explorer-openapi-index-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-resource-explorer-openapi-resource-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-resource-explorer-openapi-search-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-resource-explorer-openapi-search-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-resource-explorer-openapi-view-example.json
   - type: SpectralRules
     url: rules/amazon-resource-explorer-spectral-rules.yml
