@@ -40,6 +40,14 @@ apis:
       - type: FAQ
         url: https://aws.amazon.com/resourceexplorer/faqs/
 common:
+  - type: TrustCenter
+    url: security/amazon-resource-explorer-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/amazon-resource-explorer-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-resource-explorer-domain-security.yml
+  - type: Authentication
+    url: authentication/amazon-resource-explorer-authentication.yml
   - type: Portal
     url: https://aws.amazon.com/resourceexplorer/
   - type: Portal
