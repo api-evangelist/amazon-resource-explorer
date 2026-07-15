@@ -40,6 +40,8 @@ apis:
       - type: FAQ
         url: https://aws.amazon.com/resourceexplorer/faqs/
 common:
+  - type: AgenticAccess
+    url: agentic-access/amazon-resource-explorer-agentic-access.yml
   - type: TrustCenter
     url: security/amazon-resource-explorer-trust-center.yml
   - type: VulnerabilityDisclosure
