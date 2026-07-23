@@ -1,0 +1,109 @@
+openapi: 3.0.3
+info:
+  title: Amazon Resource Explorer Index Views API
+  description: AWS Resource Explorer is a resource search and discovery service that provides a unified view of your AWS resources across Regions.
+  version: 2022-07-28
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- url: https://resource-explorer-2.{region}.amazonaws.com
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+security:
+- sigv4: []
+tags:
+- name: Views
+paths:
+  /CreateView:
+    post:
+      operationId: CreateView
+      summary: Create View
+      description: Creates a view with filters for Resource Explorer searches.
+      tags:
+      - Views
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - ViewName
+              properties:
+                ViewName:
+                  type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/View'
+  /DeleteView:
+    post:
+      operationId: DeleteView
+      summary: Delete View
+      description: Deletes the specified view.
+      tags:
+      - Views
+      responses:
+        '200':
+          description: Success
+  /GetView:
+    post:
+      operationId: GetView
+      summary: Get View
+      description: Retrieves details of the specified view.
+      tags:
+      - Views
+      responses:
+        '200':
+          description: Success
+  /ListViews:
+    post:
+      operationId: ListViews
+      summary: List Views
+      description: Lists all available views in the AWS Region.
+      tags:
+      - Views
+      responses:
+        '200':
+          description: Success
+  /BatchGetView:
+    post:
+      operationId: BatchGetView
+      summary: Batch Get View
+      description: Retrieves details for a batch of views.
+      tags:
+      - Views
+      responses:
+        '200':
+          description: Success
+components:
+  schemas:
+    View:
+      type: object
+      properties:
+        Filters:
+          type: object
+          description: The filters applied to the view.
+        IncludedProperties:
+          type: array
+          items:
+            type: object
+          description: Additional properties to include in the view.
+        ViewArn:
+          type: string
+          description: The ARN of the view.
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4

@@ -1,0 +1,77 @@
+openapi: 3.0.3
+info:
+  title: Amazon Resource Explorer Index Tags API
+  description: AWS Resource Explorer is a resource search and discovery service that provides a unified view of your AWS resources across Regions.
+  version: 2022-07-28
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- url: https://resource-explorer-2.{region}.amazonaws.com
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+security:
+- sigv4: []
+tags:
+- name: Tags
+paths:
+  /ListTagsForResource/{resourceArn}:
+    get:
+      operationId: ListTagsForResource
+      summary: List Tags for Resource
+      description: Lists the tags attached to the specified Resource Explorer resource.
+      tags:
+      - Tags
+      parameters:
+      - name: resourceArn
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+  /TagResource/{resourceArn}:
+    post:
+      operationId: TagResource
+      summary: Tag Resource
+      description: Adds one or more tag key and value pairs to the specified resource.
+      tags:
+      - Tags
+      parameters:
+      - name: resourceArn
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+  /UntagResource/{resourceArn}:
+    delete:
+      operationId: UntagResource
+      summary: Untag Resource
+      description: Removes one or more tag key and value pairs from the specified resource.
+      tags:
+      - Tags
+      parameters:
+      - name: resourceArn
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+components:
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4

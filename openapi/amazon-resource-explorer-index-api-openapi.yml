@@ -1,0 +1,116 @@
+openapi: 3.0.3
+info:
+  title: Amazon Resource Explorer Index API
+  description: AWS Resource Explorer is a resource search and discovery service that provides a unified view of your AWS resources across Regions.
+  version: 2022-07-28
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- url: https://resource-explorer-2.{region}.amazonaws.com
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+security:
+- sigv4: []
+tags:
+- name: Index
+paths:
+  /GetIndex:
+    post:
+      operationId: GetIndex
+      summary: Get Index
+      description: Retrieves information about the aggregator index for the AWS Region.
+      tags:
+      - Index
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Index'
+  /CreateIndex:
+    post:
+      operationId: CreateIndex
+      summary: Create Index
+      description: Creates an index structure for the AWS Region.
+      tags:
+      - Index
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Type:
+                  type: string
+                  enum:
+                  - LOCAL
+                  - AGGREGATOR
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Index'
+  /DeleteIndex:
+    post:
+      operationId: DeleteIndex
+      summary: Delete Index
+      description: Deletes the specified index and turns off AWS Resource Explorer for the Region.
+      tags:
+      - Index
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - Arn
+              properties:
+                Arn:
+                  type: string
+      responses:
+        '200':
+          description: Success
+  /ListIndexes:
+    post:
+      operationId: ListIndexes
+      summary: List Indexes
+      description: Retrieves a list of all indexes in the AWS Region.
+      tags:
+      - Index
+      responses:
+        '200':
+          description: Success
+components:
+  schemas:
+    Index:
+      type: object
+      properties:
+        Arn:
+          type: string
+          description: The ARN of the index.
+        Region:
+          type: string
+          description: The AWS Region where the index exists.
+        Type:
+          type: string
+          enum:
+          - LOCAL
+          - AGGREGATOR
+          description: The type of the index.
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
