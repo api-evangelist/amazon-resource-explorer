@@ -5,7 +5,20 @@ description: >-
   resources across AWS Regions using an internet search-like experience. It provides a unified view of your AWS
   resources and helps you understand your resource inventory.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-resource-explorer.png
 tags:
   - AWS
   - Discovery
@@ -17,29 +30,99 @@ created: '2026-03-16'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: amazon-resource-explorer:aws-resource-explorer-api
-    name: AWS Resource Explorer API
-    description: >-
-      The AWS Resource Explorer API provides programmatic access to search and discover AWS resources across Regions,
-      manage indexes, views, and resource type configurations for your AWS account.
-    humanURL: https://aws.amazon.com/resourceexplorer/
-    baseURL: https://resource-explorer-2.amazonaws.com
-    tags:
-      - Discovery
-      - Inventory
-      - Resource Management
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/resource-explorer/latest/apireference/Welcome.html
-      - type: OpenAPI
-        url: https://api.apis.guru/v2/specs/amazonaws.com/resource-explorer-2/2022-07-28/openapi.yaml
-      - type: GettingStarted
-        url: https://aws.amazon.com/resourceexplorer/getting-started/
-      - type: Pricing
-        url: https://aws.amazon.com/resourceexplorer/pricing/
-      - type: FAQ
-        url: https://aws.amazon.com/resourceexplorer/faqs/
+- aid: amazon-resource-explorer:amazon-resource-explorer-index-api
+  name: Amazon Resource Explorer Index API
+  description: The Index API from Amazon Resource Explorer — 4 operation(s) for index.
+  humanURL: https://aws.amazon.com/resourceexplorer/
+  baseURL: https://resource-explorer-2.amazonaws.com
+  tags:
+  - Index
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-resource-explorer-index-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/resource-explorer/latest/apireference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/resourceexplorer/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/resourceexplorer/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/resourceexplorer/faqs/
+- aid: amazon-resource-explorer:amazon-resource-explorer-resources-api
+  name: Amazon Resource Explorer Resources API
+  description: The Resources API from Amazon Resource Explorer — 1 operation(s) for resources.
+  humanURL: https://aws.amazon.com/resourceexplorer/
+  baseURL: https://resource-explorer-2.amazonaws.com
+  tags:
+  - Resources
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-resource-explorer-resources-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/resource-explorer/latest/apireference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/resourceexplorer/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/resourceexplorer/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/resourceexplorer/faqs/
+- aid: amazon-resource-explorer:amazon-resource-explorer-search-api
+  name: Amazon Resource Explorer Search API
+  description: The Search API from Amazon Resource Explorer — 1 operation(s) for search.
+  humanURL: https://aws.amazon.com/resourceexplorer/
+  baseURL: https://resource-explorer-2.amazonaws.com
+  tags:
+  - Search
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-resource-explorer-search-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/resource-explorer/latest/apireference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/resourceexplorer/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/resourceexplorer/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/resourceexplorer/faqs/
+- aid: amazon-resource-explorer:amazon-resource-explorer-tags-api
+  name: Amazon Resource Explorer Tags API
+  description: The Tags API from Amazon Resource Explorer — 3 operation(s) for tags.
+  humanURL: https://aws.amazon.com/resourceexplorer/
+  baseURL: https://resource-explorer-2.amazonaws.com
+  tags:
+  - Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-resource-explorer-tags-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/resource-explorer/latest/apireference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/resourceexplorer/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/resourceexplorer/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/resourceexplorer/faqs/
+- aid: amazon-resource-explorer:amazon-resource-explorer-views-api
+  name: Amazon Resource Explorer Views API
+  description: The Views API from Amazon Resource Explorer — 5 operation(s) for views.
+  humanURL: https://aws.amazon.com/resourceexplorer/
+  baseURL: https://resource-explorer-2.amazonaws.com
+  tags:
+  - Views
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-resource-explorer-views-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/resource-explorer/latest/apireference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/resourceexplorer/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/resourceexplorer/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/resourceexplorer/faqs/
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/amazon-resource-explorer/overview
   - type: AgenticAccess
     url: agentic-access/amazon-resource-explorer-agentic-access.yml
   - type: TrustCenter
