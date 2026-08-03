@@ -1,0 +1,401 @@
+{
+  "info": {
+    "_postman_id": "f91be945-8edf-40e6-87db-c06103db4854",
+    "name": "Amazon Resource Explorer Index API",
+    "description": "AWS Resource Explorer is a resource search and discovery service that provides a unified view of your AWS resources across Regions.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:52:11.000Z",
+    "updatedAt": "2026-07-28T00:52:11.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-f91be945-8edf-40e6-87db-c06103db4854"
+  },
+  "item": [
+    {
+      "name": "GetIndex",
+      "item": [
+        {
+          "name": "Get Index",
+          "id": "76cf8c56-8857-43d6-a884-fad907f35b3e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/GetIndex",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "GetIndex"
+              ]
+            },
+            "description": "Retrieves information about the aggregator index for the AWS Region."
+          },
+          "response": [
+            {
+              "id": "70a89d89-5afa-478f-85be-b998bce09aa4",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/GetIndex",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "GetIndex"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"Arn\": \"<string>\",\n  \"Region\": \"<string>\",\n  \"Type\": \"AGGREGATOR\"\n}",
+              "createdAt": "2026-07-28T00:52:12.000Z",
+              "updatedAt": "2026-07-28T00:52:12.000Z",
+              "uid": "35240-70a89d89-5afa-478f-85be-b998bce09aa4"
+            }
+          ],
+          "createdAt": "2026-07-28T00:52:12.000Z",
+          "updatedAt": "2026-07-28T00:52:12.000Z",
+          "uid": "35240-76cf8c56-8857-43d6-a884-fad907f35b3e"
+        }
+      ],
+      "id": "e16ca44a-a8e3-47e5-8d78-f8bf71bde91e",
+      "createdAt": "2026-07-28T00:52:12.000Z",
+      "updatedAt": "2026-07-28T00:52:12.000Z",
+      "uid": "35240-e16ca44a-a8e3-47e5-8d78-f8bf71bde91e"
+    },
+    {
+      "name": "CreateIndex",
+      "item": [
+        {
+          "name": "Create Index",
+          "id": "2ab46adc-a5c3-47fc-b933-e267fa8abe11",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Type\": \"LOCAL\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/CreateIndex",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "CreateIndex"
+              ]
+            },
+            "description": "Creates an index structure for the AWS Region."
+          },
+          "response": [
+            {
+              "id": "a1b5ceff-e3d6-4e81-80e6-4d35bb885109",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Type\": \"LOCAL\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/CreateIndex",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "CreateIndex"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"Arn\": \"<string>\",\n  \"Region\": \"<string>\",\n  \"Type\": \"AGGREGATOR\"\n}",
+              "createdAt": "2026-07-28T00:52:12.000Z",
+              "updatedAt": "2026-07-28T00:52:12.000Z",
+              "uid": "35240-a1b5ceff-e3d6-4e81-80e6-4d35bb885109"
+            }
+          ],
+          "createdAt": "2026-07-28T00:52:12.000Z",
+          "updatedAt": "2026-07-28T00:52:12.000Z",
+          "uid": "35240-2ab46adc-a5c3-47fc-b933-e267fa8abe11"
+        }
+      ],
+      "id": "f0755dc0-8da5-4ac1-8c87-1e6fbf908481",
+      "createdAt": "2026-07-28T00:52:12.000Z",
+      "updatedAt": "2026-07-28T00:52:12.000Z",
+      "uid": "35240-f0755dc0-8da5-4ac1-8c87-1e6fbf908481"
+    },
+    {
+      "name": "DeleteIndex",
+      "item": [
+        {
+          "name": "Delete Index",
+          "id": "57c6ea92-e33e-4653-9b85-ca8a592225d4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Arn\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/DeleteIndex",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "DeleteIndex"
+              ]
+            },
+            "description": "Deletes the specified index and turns off AWS Resource Explorer for the Region."
+          },
+          "response": [
+            {
+              "id": "7b4900c3-5141-4ba1-ac75-da693866539f",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Arn\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/DeleteIndex",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "DeleteIndex"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:52:12.000Z",
+              "updatedAt": "2026-07-28T00:52:12.000Z",
+              "uid": "35240-7b4900c3-5141-4ba1-ac75-da693866539f"
+            }
+          ],
+          "createdAt": "2026-07-28T00:52:12.000Z",
+          "updatedAt": "2026-07-28T00:52:12.000Z",
+          "uid": "35240-57c6ea92-e33e-4653-9b85-ca8a592225d4"
+        }
+      ],
+      "id": "b3e6e703-54d1-4856-8cac-66b8b4e84195",
+      "createdAt": "2026-07-28T00:52:12.000Z",
+      "updatedAt": "2026-07-28T00:52:12.000Z",
+      "uid": "35240-b3e6e703-54d1-4856-8cac-66b8b4e84195"
+    },
+    {
+      "name": "ListIndexes",
+      "item": [
+        {
+          "name": "List Indexes",
+          "id": "3ade42fe-1387-47d3-87cf-1bcd933c66ee",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/ListIndexes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "ListIndexes"
+              ]
+            },
+            "description": "Retrieves a list of all indexes in the AWS Region."
+          },
+          "response": [
+            {
+              "id": "b45934d5-33ef-44f2-9017-fa8a24680fa8",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/ListIndexes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "ListIndexes"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:52:12.000Z",
+              "updatedAt": "2026-07-28T00:52:12.000Z",
+              "uid": "35240-b45934d5-33ef-44f2-9017-fa8a24680fa8"
+            }
+          ],
+          "createdAt": "2026-07-28T00:52:12.000Z",
+          "updatedAt": "2026-07-28T00:52:12.000Z",
+          "uid": "35240-3ade42fe-1387-47d3-87cf-1bcd933c66ee"
+        }
+      ],
+      "id": "c9f3c5ab-4e38-4bd3-a988-80d0e7e2e3e2",
+      "createdAt": "2026-07-28T00:52:12.000Z",
+      "updatedAt": "2026-07-28T00:52:12.000Z",
+      "uid": "35240-c9f3c5ab-4e38-4bd3-a988-80d0e7e2e3e2"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://resource-explorer-2.{{region}}.amazonaws.com"
+    }
+  ]
+}

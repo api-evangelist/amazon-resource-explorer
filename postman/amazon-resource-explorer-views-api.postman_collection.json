@@ -1,0 +1,426 @@
+{
+  "info": {
+    "_postman_id": "b0267e7d-e455-4095-8696-8895ca49a650",
+    "name": "Amazon Resource Explorer Index Views API",
+    "description": "AWS Resource Explorer is a resource search and discovery service that provides a unified view of your AWS resources across Regions.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:52:15.000Z",
+    "updatedAt": "2026-07-28T00:52:15.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-b0267e7d-e455-4095-8696-8895ca49a650"
+  },
+  "item": [
+    {
+      "name": "CreateView",
+      "item": [
+        {
+          "name": "Create View",
+          "id": "0bfb85c4-5df4-4e01-bf8b-0857b2653fcc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ViewName\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/CreateView",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "CreateView"
+              ]
+            },
+            "description": "Creates a view with filters for Resource Explorer searches."
+          },
+          "response": [
+            {
+              "id": "5bd8902c-3fd4-4d4d-b507-dbc19be1f99e",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ViewName\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/CreateView",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "CreateView"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"Filters\": {},\n  \"ViewArn\": \"<string>\"\n}",
+              "createdAt": "2026-07-28T00:52:15.000Z",
+              "updatedAt": "2026-07-28T00:52:15.000Z",
+              "uid": "35240-5bd8902c-3fd4-4d4d-b507-dbc19be1f99e"
+            }
+          ],
+          "createdAt": "2026-07-28T00:52:15.000Z",
+          "updatedAt": "2026-07-28T00:52:15.000Z",
+          "uid": "35240-0bfb85c4-5df4-4e01-bf8b-0857b2653fcc"
+        }
+      ],
+      "id": "9e4f5ac4-9e4d-409f-9398-5f5148db067d",
+      "createdAt": "2026-07-28T00:52:15.000Z",
+      "updatedAt": "2026-07-28T00:52:15.000Z",
+      "uid": "35240-9e4f5ac4-9e4d-409f-9398-5f5148db067d"
+    },
+    {
+      "name": "DeleteView",
+      "item": [
+        {
+          "name": "Delete View",
+          "id": "a42e487d-4bfa-4c0f-b59f-776256d79816",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/DeleteView",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "DeleteView"
+              ]
+            },
+            "description": "Deletes the specified view."
+          },
+          "response": [
+            {
+              "id": "e4d241ac-2435-4b09-bb8f-46fa15f91a1c",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/DeleteView",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "DeleteView"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:52:15.000Z",
+              "updatedAt": "2026-07-28T00:52:15.000Z",
+              "uid": "35240-e4d241ac-2435-4b09-bb8f-46fa15f91a1c"
+            }
+          ],
+          "createdAt": "2026-07-28T00:52:15.000Z",
+          "updatedAt": "2026-07-28T00:52:15.000Z",
+          "uid": "35240-a42e487d-4bfa-4c0f-b59f-776256d79816"
+        }
+      ],
+      "id": "1d6b3ec2-84d0-4048-9691-dbe60c1fbbc4",
+      "createdAt": "2026-07-28T00:52:15.000Z",
+      "updatedAt": "2026-07-28T00:52:15.000Z",
+      "uid": "35240-1d6b3ec2-84d0-4048-9691-dbe60c1fbbc4"
+    },
+    {
+      "name": "GetView",
+      "item": [
+        {
+          "name": "Get View",
+          "id": "36c70f9d-980e-48a0-ac44-3f628a46ea30",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/GetView",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "GetView"
+              ]
+            },
+            "description": "Retrieves details of the specified view."
+          },
+          "response": [
+            {
+              "id": "7ede78b2-bc25-458c-9f3c-87d98a73e8c1",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/GetView",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "GetView"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:52:15.000Z",
+              "updatedAt": "2026-07-28T00:52:15.000Z",
+              "uid": "35240-7ede78b2-bc25-458c-9f3c-87d98a73e8c1"
+            }
+          ],
+          "createdAt": "2026-07-28T00:52:15.000Z",
+          "updatedAt": "2026-07-28T00:52:15.000Z",
+          "uid": "35240-36c70f9d-980e-48a0-ac44-3f628a46ea30"
+        }
+      ],
+      "id": "8b591bdc-5c21-492c-8372-e5d0af8fcd72",
+      "createdAt": "2026-07-28T00:52:15.000Z",
+      "updatedAt": "2026-07-28T00:52:15.000Z",
+      "uid": "35240-8b591bdc-5c21-492c-8372-e5d0af8fcd72"
+    },
+    {
+      "name": "ListViews",
+      "item": [
+        {
+          "name": "List Views",
+          "id": "0f9575aa-fe16-4fac-9eea-df5dceee56bd",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/ListViews",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "ListViews"
+              ]
+            },
+            "description": "Lists all available views in the AWS Region."
+          },
+          "response": [
+            {
+              "id": "14e1419e-710a-436c-9b93-c1f50e687afc",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/ListViews",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "ListViews"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:52:15.000Z",
+              "updatedAt": "2026-07-28T00:52:15.000Z",
+              "uid": "35240-14e1419e-710a-436c-9b93-c1f50e687afc"
+            }
+          ],
+          "createdAt": "2026-07-28T00:52:15.000Z",
+          "updatedAt": "2026-07-28T00:52:15.000Z",
+          "uid": "35240-0f9575aa-fe16-4fac-9eea-df5dceee56bd"
+        }
+      ],
+      "id": "5ef1f1f4-5cd6-4b08-a84b-ad3d71286b9a",
+      "createdAt": "2026-07-28T00:52:15.000Z",
+      "updatedAt": "2026-07-28T00:52:15.000Z",
+      "uid": "35240-5ef1f1f4-5cd6-4b08-a84b-ad3d71286b9a"
+    },
+    {
+      "name": "BatchGetView",
+      "item": [
+        {
+          "name": "Batch Get View",
+          "id": "7b6bfef3-10bb-4725-a3eb-4528ea9cd71c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/BatchGetView",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "BatchGetView"
+              ]
+            },
+            "description": "Retrieves details for a batch of views."
+          },
+          "response": [
+            {
+              "id": "9bd88daf-8777-4a9f-9b56-dc216b2a950f",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/BatchGetView",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "BatchGetView"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:52:15.000Z",
+              "updatedAt": "2026-07-28T00:52:15.000Z",
+              "uid": "35240-9bd88daf-8777-4a9f-9b56-dc216b2a950f"
+            }
+          ],
+          "createdAt": "2026-07-28T00:52:15.000Z",
+          "updatedAt": "2026-07-28T00:52:15.000Z",
+          "uid": "35240-7b6bfef3-10bb-4725-a3eb-4528ea9cd71c"
+        }
+      ],
+      "id": "54ce8cab-f083-4203-846c-e0e781631985",
+      "createdAt": "2026-07-28T00:52:15.000Z",
+      "updatedAt": "2026-07-28T00:52:15.000Z",
+      "uid": "35240-54ce8cab-f083-4203-846c-e0e781631985"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://resource-explorer-2.{{region}}.amazonaws.com"
+    }
+  ]
+}

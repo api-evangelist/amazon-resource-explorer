@@ -1,0 +1,320 @@
+{
+  "info": {
+    "_postman_id": "af1d8881-3ae8-40a4-bbcb-2c6b758bbfad",
+    "name": "Amazon Resource Explorer Index Tags API",
+    "description": "AWS Resource Explorer is a resource search and discovery service that provides a unified view of your AWS resources across Regions.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:52:14.000Z",
+    "updatedAt": "2026-07-28T00:52:14.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-af1d8881-3ae8-40a4-bbcb-2c6b758bbfad"
+  },
+  "item": [
+    {
+      "name": "ListTagsForResource",
+      "item": [
+        {
+          "name": "{resourceArn}",
+          "item": [
+            {
+              "name": "List Tags for Resource",
+              "id": "f8bc9b03-30e5-44c5-ba1a-6457cabb9d6d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/ListTagsForResource/:resourceArn",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "ListTagsForResource",
+                    ":resourceArn"
+                  ],
+                  "variable": [
+                    {
+                      "id": "f9c431ed-d1b3-40cb-90c3-96c3dbe1b426",
+                      "key": "resourceArn",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "description": "Lists the tags attached to the specified Resource Explorer resource."
+              },
+              "response": [
+                {
+                  "id": "f54d87b4-227c-461c-b578-4ae1c1407e4f",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/ListTagsForResource/:resourceArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "ListTagsForResource",
+                        ":resourceArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "resourceArn"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:52:14.000Z",
+                  "updatedAt": "2026-07-28T00:52:14.000Z",
+                  "uid": "35240-f54d87b4-227c-461c-b578-4ae1c1407e4f"
+                }
+              ],
+              "createdAt": "2026-07-28T00:52:14.000Z",
+              "updatedAt": "2026-07-28T00:52:14.000Z",
+              "uid": "35240-f8bc9b03-30e5-44c5-ba1a-6457cabb9d6d"
+            }
+          ],
+          "id": "2e757d14-0f07-4a54-bfb3-232574bb9376",
+          "createdAt": "2026-07-28T00:52:14.000Z",
+          "updatedAt": "2026-07-28T00:52:14.000Z",
+          "uid": "35240-2e757d14-0f07-4a54-bfb3-232574bb9376"
+        }
+      ],
+      "id": "b10d620d-7ba9-4aa8-9013-d52c694d1274",
+      "createdAt": "2026-07-28T00:52:14.000Z",
+      "updatedAt": "2026-07-28T00:52:14.000Z",
+      "uid": "35240-b10d620d-7ba9-4aa8-9013-d52c694d1274"
+    },
+    {
+      "name": "TagResource",
+      "item": [
+        {
+          "name": "{resourceArn}",
+          "item": [
+            {
+              "name": "Tag Resource",
+              "id": "dcad25d3-2271-4d25-b999-7f7e4fbd5bbf",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/TagResource/:resourceArn",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "TagResource",
+                    ":resourceArn"
+                  ],
+                  "variable": [
+                    {
+                      "id": "58e25a32-8222-4f04-8c84-773a1eba8080",
+                      "key": "resourceArn",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "description": "Adds one or more tag key and value pairs to the specified resource."
+              },
+              "response": [
+                {
+                  "id": "e5f88c8a-4d28-4149-acb8-486bc7cf06d0",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/TagResource/:resourceArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "TagResource",
+                        ":resourceArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "resourceArn"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:52:14.000Z",
+                  "updatedAt": "2026-07-28T00:52:14.000Z",
+                  "uid": "35240-e5f88c8a-4d28-4149-acb8-486bc7cf06d0"
+                }
+              ],
+              "createdAt": "2026-07-28T00:52:14.000Z",
+              "updatedAt": "2026-07-28T00:52:14.000Z",
+              "uid": "35240-dcad25d3-2271-4d25-b999-7f7e4fbd5bbf"
+            }
+          ],
+          "id": "ba7241ce-b23c-4ca6-bf4d-6b5858d8ea00",
+          "createdAt": "2026-07-28T00:52:14.000Z",
+          "updatedAt": "2026-07-28T00:52:14.000Z",
+          "uid": "35240-ba7241ce-b23c-4ca6-bf4d-6b5858d8ea00"
+        }
+      ],
+      "id": "460c7e6c-0bb3-4e6d-9d9b-601b3e7345fa",
+      "createdAt": "2026-07-28T00:52:14.000Z",
+      "updatedAt": "2026-07-28T00:52:14.000Z",
+      "uid": "35240-460c7e6c-0bb3-4e6d-9d9b-601b3e7345fa"
+    },
+    {
+      "name": "UntagResource",
+      "item": [
+        {
+          "name": "{resourceArn}",
+          "item": [
+            {
+              "name": "Untag Resource",
+              "id": "8befe3fe-c62d-4453-bb49-5e9ec4a3efa3",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/UntagResource/:resourceArn",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "UntagResource",
+                    ":resourceArn"
+                  ],
+                  "variable": [
+                    {
+                      "id": "22bcb808-bfa4-4914-a4cf-12ecddb96265",
+                      "key": "resourceArn",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "description": "Removes one or more tag key and value pairs from the specified resource."
+              },
+              "response": [
+                {
+                  "id": "2ed94900-63c9-4d6a-a820-4517c015330a",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/UntagResource/:resourceArn",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "UntagResource",
+                        ":resourceArn"
+                      ],
+                      "variable": [
+                        {
+                          "key": "resourceArn"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:52:14.000Z",
+                  "updatedAt": "2026-07-28T00:52:14.000Z",
+                  "uid": "35240-2ed94900-63c9-4d6a-a820-4517c015330a"
+                }
+              ],
+              "createdAt": "2026-07-28T00:52:14.000Z",
+              "updatedAt": "2026-07-28T00:52:14.000Z",
+              "uid": "35240-8befe3fe-c62d-4453-bb49-5e9ec4a3efa3"
+            }
+          ],
+          "id": "669bea95-c4e3-453d-987f-5485b12c57b8",
+          "createdAt": "2026-07-28T00:52:14.000Z",
+          "updatedAt": "2026-07-28T00:52:14.000Z",
+          "uid": "35240-669bea95-c4e3-453d-987f-5485b12c57b8"
+        }
+      ],
+      "id": "5c48f203-06e0-462b-b4fc-a1b69016af37",
+      "createdAt": "2026-07-28T00:52:14.000Z",
+      "updatedAt": "2026-07-28T00:52:14.000Z",
+      "uid": "35240-5c48f203-06e0-462b-b4fc-a1b69016af37"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://resource-explorer-2.{{region}}.amazonaws.com"
+    }
+  ]
+}

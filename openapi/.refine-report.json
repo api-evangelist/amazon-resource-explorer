@@ -1,0 +1,22 @@
+{
+  "provider": "amazon-resource-explorer",
+  "sources": [
+    "amazon-resource-explorer-index-api-openapi.yml",
+    "amazon-resource-explorer-resources-api-openapi.yml",
+    "amazon-resource-explorer-search-api-openapi.yml",
+    "amazon-resource-explorer-tags-api-openapi.yml",
+    "amazon-resource-explorer-views-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-resource-explorer-index-api-openapi.yml",
+    "amazon-resource-explorer-resources-api-openapi.yml",
+    "amazon-resource-explorer-search-api-openapi.yml",
+    "amazon-resource-explorer-tags-api-openapi.yml",
+    "amazon-resource-explorer-views-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

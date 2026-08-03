@@ -1,0 +1,306 @@
+openapi: 3.0.3
+info:
+  title: Amazon Resource Explorer API
+  description: AWS Resource Explorer is a resource search and discovery service that provides a unified view of your AWS resources across Regions.
+  version: 2022-07-28
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+  - url: https://resource-explorer-2.{region}.amazonaws.com
+    variables:
+      region:
+        default: us-east-1
+        description: AWS region
+components:
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+  schemas:
+    Resource:
+      type: object
+      properties:
+        Arn:
+          type: string
+          description: The Amazon Resource Name (ARN) of the resource.
+        LastReportedAt:
+          type: string
+          format: date-time
+          description: The date and time the resource was last updated.
+        OwningAccountId:
+          type: string
+          description: The AWS account ID of the account that owns the resource.
+        Region:
+          type: string
+          description: The AWS Region where the resource exists.
+        ResourceType:
+          type: string
+          description: The type of the resource.
+        Service:
+          type: string
+          description: The AWS service that owns the resource.
+    SearchRequest:
+      type: object
+      required:
+        - QueryString
+      properties:
+        QueryString:
+          type: string
+          description: A string that includes keywords and filters to search for resources.
+        MaxResults:
+          type: integer
+          description: The maximum number of results to include in the response.
+        NextToken:
+          type: string
+          description: The token for the next page of results.
+        ViewArn:
+          type: string
+          description: The ARN of the view to search.
+    SearchResponse:
+      type: object
+      properties:
+        Count:
+          type: object
+          description: The count of matching resources.
+        NextToken:
+          type: string
+          description: The token for the next page of results.
+        Resources:
+          type: array
+          items:
+            $ref: '#/components/schemas/Resource'
+        ViewArn:
+          type: string
+          description: The ARN of the view used for the search.
+    Index:
+      type: object
+      properties:
+        Arn:
+          type: string
+          description: The ARN of the index.
+        Region:
+          type: string
+          description: The AWS Region where the index exists.
+        Type:
+          type: string
+          enum: [LOCAL, AGGREGATOR]
+          description: The type of the index.
+    View:
+      type: object
+      properties:
+        Filters:
+          type: object
+          description: The filters applied to the view.
+        IncludedProperties:
+          type: array
+          items:
+            type: object
+          description: Additional properties to include in the view.
+        ViewArn:
+          type: string
+          description: The ARN of the view.
+security:
+  - sigv4: []
+paths:
+  /Search:
+    post:
+      operationId: Search
+      summary: Search Resources
+      description: Searches for resources using the Resource Explorer query syntax.
+      tags: [Search]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SearchRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+  /GetIndex:
+    post:
+      operationId: GetIndex
+      summary: Get Index
+      description: Retrieves information about the aggregator index for the AWS Region.
+      tags: [Index]
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Index'
+  /CreateIndex:
+    post:
+      operationId: CreateIndex
+      summary: Create Index
+      description: Creates an index structure for the AWS Region.
+      tags: [Index]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Type:
+                  type: string
+                  enum: [LOCAL, AGGREGATOR]
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Index'
+  /DeleteIndex:
+    post:
+      operationId: DeleteIndex
+      summary: Delete Index
+      description: Deletes the specified index and turns off AWS Resource Explorer for the Region.
+      tags: [Index]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [Arn]
+              properties:
+                Arn:
+                  type: string
+      responses:
+        '200':
+          description: Success
+  /ListIndexes:
+    post:
+      operationId: ListIndexes
+      summary: List Indexes
+      description: Retrieves a list of all indexes in the AWS Region.
+      tags: [Index]
+      responses:
+        '200':
+          description: Success
+  /CreateView:
+    post:
+      operationId: CreateView
+      summary: Create View
+      description: Creates a view with filters for Resource Explorer searches.
+      tags: [Views]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [ViewName]
+              properties:
+                ViewName:
+                  type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/View'
+  /DeleteView:
+    post:
+      operationId: DeleteView
+      summary: Delete View
+      description: Deletes the specified view.
+      tags: [Views]
+      responses:
+        '200':
+          description: Success
+  /GetView:
+    post:
+      operationId: GetView
+      summary: Get View
+      description: Retrieves details of the specified view.
+      tags: [Views]
+      responses:
+        '200':
+          description: Success
+  /ListViews:
+    post:
+      operationId: ListViews
+      summary: List Views
+      description: Lists all available views in the AWS Region.
+      tags: [Views]
+      responses:
+        '200':
+          description: Success
+  /BatchGetView:
+    post:
+      operationId: BatchGetView
+      summary: Batch Get View
+      description: Retrieves details for a batch of views.
+      tags: [Views]
+      responses:
+        '200':
+          description: Success
+  /ListSupportedResourceTypes:
+    post:
+      operationId: ListSupportedResourceTypes
+      summary: List Supported Resource Types
+      description: Lists the resource types supported by Resource Explorer.
+      tags: [Resources]
+      responses:
+        '200':
+          description: Success
+  /ListTagsForResource/{resourceArn}:
+    get:
+      operationId: ListTagsForResource
+      summary: List Tags for Resource
+      description: Lists the tags attached to the specified Resource Explorer resource.
+      tags: [Tags]
+      parameters:
+        - name: resourceArn
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /TagResource/{resourceArn}:
+    post:
+      operationId: TagResource
+      summary: Tag Resource
+      description: Adds one or more tag key and value pairs to the specified resource.
+      tags: [Tags]
+      parameters:
+        - name: resourceArn
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+  /UntagResource/{resourceArn}:
+    delete:
+      operationId: UntagResource
+      summary: Untag Resource
+      description: Removes one or more tag key and value pairs from the specified resource.
+      tags: [Tags]
+      parameters:
+        - name: resourceArn
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success

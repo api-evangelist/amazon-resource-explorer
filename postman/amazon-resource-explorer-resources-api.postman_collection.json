@@ -1,0 +1,112 @@
+{
+  "info": {
+    "_postman_id": "508d4719-0bee-45b9-a4a5-e06fbeead180",
+    "name": "Amazon Resource Explorer Index Resources API",
+    "description": "AWS Resource Explorer is a resource search and discovery service that provides a unified view of your AWS resources across Regions.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:52:12.000Z",
+    "updatedAt": "2026-07-28T00:52:12.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-508d4719-0bee-45b9-a4a5-e06fbeead180"
+  },
+  "item": [
+    {
+      "name": "ListSupportedResourceTypes",
+      "item": [
+        {
+          "name": "List Supported Resource Types",
+          "id": "e074aa27-bd7a-4a1c-941a-0262ffddcff0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/ListSupportedResourceTypes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "ListSupportedResourceTypes"
+              ]
+            },
+            "description": "Lists the resource types supported by Resource Explorer."
+          },
+          "response": [
+            {
+              "id": "6a6b25fa-81d2-44f1-a6d8-96f9a4c4153c",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/ListSupportedResourceTypes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "ListSupportedResourceTypes"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:52:12.000Z",
+              "updatedAt": "2026-07-28T00:52:12.000Z",
+              "uid": "35240-6a6b25fa-81d2-44f1-a6d8-96f9a4c4153c"
+            }
+          ],
+          "createdAt": "2026-07-28T00:52:12.000Z",
+          "updatedAt": "2026-07-28T00:52:12.000Z",
+          "uid": "35240-e074aa27-bd7a-4a1c-941a-0262ffddcff0"
+        }
+      ],
+      "id": "dd4a86d0-acc7-4aae-9870-63aa7e97e244",
+      "createdAt": "2026-07-28T00:52:12.000Z",
+      "updatedAt": "2026-07-28T00:52:12.000Z",
+      "uid": "35240-dd4a86d0-acc7-4aae-9870-63aa7e97e244"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://resource-explorer-2.{{region}}.amazonaws.com"
+    }
+  ]
+}
