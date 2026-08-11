@@ -204,7 +204,7 @@ common:
   - type: Vocabulary
     url: vocabulary/amazon-resource-explorer-vocabulary.yaml
   - type: OpenAPI
-    url: openapi/amazon-resource-explorer-openapi.yml
+    url: openapi/_original/amazon-resource-explorer-openapi.yml
   - type: Integrations
     url: https://aws.amazon.com/partners/
 integrations:
