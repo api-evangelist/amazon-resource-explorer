@@ -1,0 +1,85 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Resource Explorer Index Views API",
+    "version": "2022-07-28"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Views",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create View",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/CreateView",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a view with filters for Resource Explorer searches."
+        },
+        {
+          "info": {
+            "name": "Delete View",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/DeleteView"
+          },
+          "docs": "Deletes the specified view."
+        },
+        {
+          "info": {
+            "name": "Get View",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/GetView"
+          },
+          "docs": "Retrieves details of the specified view."
+        },
+        {
+          "info": {
+            "name": "List Views",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/ListViews"
+          },
+          "docs": "Lists all available views in the AWS Region."
+        },
+        {
+          "info": {
+            "name": "Batch Get View",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/BatchGetView"
+          },
+          "docs": "Retrieves details for a batch of views."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

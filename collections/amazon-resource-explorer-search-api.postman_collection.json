@@ -1,0 +1,171 @@
+{
+  "item": [
+    {
+      "id": "3288ac89-59ec-4a86-93b6-3d2b13c7d30e",
+      "name": "Search",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5d0beed3-b575-499d-8bed-3422d8d79b75",
+          "name": "Search Resources",
+          "request": {
+            "name": "Search Resources",
+            "description": {
+              "content": "Searches for resources using the Resource Explorer query syntax.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "Search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"QueryString\": \"<string>\",\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\",\n  \"ViewArn\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "9fb26b85-bef5-4f14-9709-aeb3ed251759",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"QueryString\": \"<string>\",\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\",\n  \"ViewArn\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"Count\": {},\n  \"NextToken\": \"string\",\n  \"Resources\": [\n    {\n      \"Arn\": \"string\",\n      \"LastReportedAt\": \"1971-11-06T13:34:45.532Z\",\n      \"OwningAccountId\": \"string\",\n      \"Region\": \"string\",\n      \"ResourceType\": \"string\",\n      \"Service\": \"string\"\n    },\n    {\n      \"Arn\": \"string\",\n      \"LastReportedAt\": \"2013-08-14T12:24:24.123Z\",\n      \"OwningAccountId\": \"string\",\n      \"Region\": \"string\",\n      \"ResourceType\": \"string\",\n      \"Service\": \"string\"\n    }\n  ],\n  \"ViewArn\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "AWS region",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "us-east-1",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://resource-explorer-2.{{region}}.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "da1dfe73-80db-44a5-a697-f09dc463e972",
+    "name": "Amazon Resource Explorer Index Search API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "AWS Resource Explorer is a resource search and discovery service that provides a unified view of your AWS resources across Regions.\n\nContact Support:\n Name: AWS Support",
+      "type": "text/plain"
+    }
+  }
+}

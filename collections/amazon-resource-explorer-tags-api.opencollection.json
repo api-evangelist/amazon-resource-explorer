@@ -1,0 +1,80 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Resource Explorer Index Tags API",
+    "version": "2022-07-28"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tags",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Tags for Resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/ListTagsForResource/:resourceArn",
+            "params": [
+              {
+                "name": "resourceArn",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists the tags attached to the specified Resource Explorer resource."
+        },
+        {
+          "info": {
+            "name": "Tag Resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/TagResource/:resourceArn",
+            "params": [
+              {
+                "name": "resourceArn",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Adds one or more tag key and value pairs to the specified resource."
+        },
+        {
+          "info": {
+            "name": "Untag Resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/UntagResource/:resourceArn",
+            "params": [
+              {
+                "name": "resourceArn",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Removes one or more tag key and value pairs from the specified resource."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

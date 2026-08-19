@@ -1,0 +1,78 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Resource Explorer Index API",
+    "version": "2022-07-28"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Index",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Index",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/GetIndex"
+          },
+          "docs": "Retrieves information about the aggregator index for the AWS Region."
+        },
+        {
+          "info": {
+            "name": "Create Index",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/CreateIndex",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates an index structure for the AWS Region."
+        },
+        {
+          "info": {
+            "name": "Delete Index",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/DeleteIndex",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Deletes the specified index and turns off AWS Resource Explorer for the Region."
+        },
+        {
+          "info": {
+            "name": "List Indexes",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://resource-explorer-2.{region}.amazonaws.com/ListIndexes"
+          },
+          "docs": "Retrieves a list of all indexes in the AWS Region."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
