@@ -23,6 +23,11 @@ tags:
   - AWS
   - Discovery
   - Inventory
+  - Resource Management
+tags_raw:
+  - AWS
+  - Discovery
+  - Inventory
   - Operations
   - Resource Management
 url: https://raw.githubusercontent.com/api-evangelist/amazon-resource-explorer/refs/heads/main/apis.yml
