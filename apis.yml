@@ -1,9 +1,8 @@
 aid: amazon-resource-explorer
 name: Amazon Resource Explorer
-description: >-
-  AWS Resource Explorer is a resource search and discovery service. With Resource Explorer, you can explore your
-  resources across AWS Regions using an internet search-like experience. It provides a unified view of your AWS
-  resources and helps you understand your resource inventory.
+description: AWS Resource Explorer is a resource search and discovery service. With Resource Explorer,
+  you can explore your resources across AWS Regions using an internet search-like experience. It provides
+  a unified view of your AWS resources and helps you understand your resource inventory.
 type: Index
 deliveryModel:
   model: saas
@@ -33,19 +32,19 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-resource-explorer.png
 tags:
-  - AWS
-  - Discovery
-  - Inventory
-  - Resource Management
+- AWS
+- Discovery
+- Inventory
+- Resource Management
 tags_raw:
-  - AWS
-  - Discovery
-  - Inventory
-  - Operations
-  - Resource Management
+- AWS
+- Discovery
+- Inventory
+- Operations
+- Resource Management
 url: https://raw.githubusercontent.com/api-evangelist/amazon-resource-explorer/refs/heads/main/apis.yml
 created: '2026-03-16'
-modified: '2026-05-19'
+modified: '2026-09-16'
 specificationVersion: '0.23'
 apis:
 - aid: amazon-resource-explorer:amazon-resource-explorer-index-api
@@ -139,103 +138,105 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/resourceexplorer/faqs/
 common:
-  - type: PostmanWorkspace
-    url: https://www.postman.com/kinlaneapi/amazon-resource-explorer/overview
-  - type: AgenticAccess
-    url: agentic-access/amazon-resource-explorer-agentic-access.yml
-  - type: TrustCenter
-    url: security/amazon-resource-explorer-trust-center.yml
-  - type: VulnerabilityDisclosure
-    url: security/amazon-resource-explorer-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/amazon-resource-explorer-domain-security.yml
-  - type: Authentication
-    url: authentication/amazon-resource-explorer-authentication.yml
-  - type: Portal
-    url: https://aws.amazon.com/resourceexplorer/
-  - type: Portal
-    url: https://aws.amazon.com/resourceexplorer/
-  - type: Documentation
-    url: https://docs.aws.amazon.com/resource-explorer/
-  - type: TermsOfService
-    url: https://aws.amazon.com/service-terms/
-  - type: PrivacyPolicy
-    url: https://aws.amazon.com/privacy/
-  - type: Support
-    url: https://aws.amazon.com/premiumsupport/
-  - type: Blog
-    url: https://aws.amazon.com/blogs/mt/tag/aws-resource-explorer/
-  - type: GitHubOrganization
-    url: https://github.com/aws
-  - type: Portal
-    url: https://console.aws.amazon.com/resource-explorer/
-  - type: Signup
-    url: https://portal.aws.amazon.com/billing/signup
-  - type: Login
-    url: https://signin.aws.amazon.com/
-  - type: StatusPage
-    url: https://health.aws.amazon.com/health/status
-  - type: Contact
-    url: https://aws.amazon.com/contact-us/
-  - type: JSONLD
-    url: json-ld/amazon-resource-explorer-openapi-index-context.jsonld
-  - type: JSONLD
-    url: json-ld/amazon-resource-explorer-openapi-resource-context.jsonld
-  - type: JSONLD
-    url: json-ld/amazon-resource-explorer-openapi-search-request-context.jsonld
-  - type: JSONLD
-    url: json-ld/amazon-resource-explorer-openapi-search-response-context.jsonld
-  - type: JSONLD
-    url: json-ld/amazon-resource-explorer-openapi-view-context.jsonld
-  - type: JSONSchema
-    url: json-schema/amazon-resource-explorer-openapi-index-schema.json
-  - type: JSONSchema
-    url: json-schema/amazon-resource-explorer-openapi-resource-schema.json
-  - type: JSONSchema
-    url: json-schema/amazon-resource-explorer-openapi-search-request-schema.json
-  - type: JSONSchema
-    url: json-schema/amazon-resource-explorer-openapi-search-response-schema.json
-  - type: JSONSchema
-    url: json-schema/amazon-resource-explorer-openapi-view-schema.json
-  - type: JSONStructure
-    url: json-structure/amazon-resource-explorer-openapi-index-structure.json
-  - type: JSONStructure
-    url: json-structure/amazon-resource-explorer-openapi-resource-structure.json
-  - type: JSONStructure
-    url: json-structure/amazon-resource-explorer-openapi-search-request-structure.json
-  - type: JSONStructure
-    url: json-structure/amazon-resource-explorer-openapi-search-response-structure.json
-  - type: JSONStructure
-    url: json-structure/amazon-resource-explorer-openapi-view-structure.json
-  - type: Examples
-    url: examples/amazon-resource-explorer-openapi-index-example.json
-  - type: Examples
-    url: examples/amazon-resource-explorer-openapi-resource-example.json
-  - type: Examples
-    url: examples/amazon-resource-explorer-openapi-search-request-example.json
-  - type: Examples
-    url: examples/amazon-resource-explorer-openapi-search-response-example.json
-  - type: Examples
-    url: examples/amazon-resource-explorer-openapi-view-example.json
-  - type: SpectralRules
-    url: rules/amazon-resource-explorer-spectral-rules.yml
-  - type: Vocabulary
-    url: vocabulary/amazon-resource-explorer-vocabulary.yaml
-  - type: OpenAPI
-    url: openapi/_original/amazon-resource-explorer-openapi.yml
-  - type: Integrations
-    url: https://aws.amazon.com/partners/
+- type: Website
+  url: https://amazon.com
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/amazon-resource-explorer/overview
+- type: AgenticAccess
+  url: agentic-access/amazon-resource-explorer-agentic-access.yml
+- type: TrustCenter
+  url: security/amazon-resource-explorer-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/amazon-resource-explorer-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amazon-resource-explorer-domain-security.yml
+- type: Authentication
+  url: authentication/amazon-resource-explorer-authentication.yml
+- type: Portal
+  url: https://aws.amazon.com/resourceexplorer/
+- type: Portal
+  url: https://aws.amazon.com/resourceexplorer/
+- type: Documentation
+  url: https://docs.aws.amazon.com/resource-explorer/
+- type: TermsOfService
+  url: https://aws.amazon.com/service-terms/
+- type: PrivacyPolicy
+  url: https://aws.amazon.com/privacy/
+- type: Support
+  url: https://aws.amazon.com/premiumsupport/
+- type: Blog
+  url: https://aws.amazon.com/blogs/mt/tag/aws-resource-explorer/
+- type: GitHubOrganization
+  url: https://github.com/aws
+- type: Portal
+  url: https://console.aws.amazon.com/resource-explorer/
+- type: Signup
+  url: https://portal.aws.amazon.com/billing/signup
+- type: Login
+  url: https://signin.aws.amazon.com/
+- type: StatusPage
+  url: https://health.aws.amazon.com/health/status
+- type: Contact
+  url: https://aws.amazon.com/contact-us/
+- type: JSONLD
+  url: json-ld/amazon-resource-explorer-openapi-index-context.jsonld
+- type: JSONLD
+  url: json-ld/amazon-resource-explorer-openapi-resource-context.jsonld
+- type: JSONLD
+  url: json-ld/amazon-resource-explorer-openapi-search-request-context.jsonld
+- type: JSONLD
+  url: json-ld/amazon-resource-explorer-openapi-search-response-context.jsonld
+- type: JSONLD
+  url: json-ld/amazon-resource-explorer-openapi-view-context.jsonld
+- type: JSONSchema
+  url: json-schema/amazon-resource-explorer-openapi-index-schema.json
+- type: JSONSchema
+  url: json-schema/amazon-resource-explorer-openapi-resource-schema.json
+- type: JSONSchema
+  url: json-schema/amazon-resource-explorer-openapi-search-request-schema.json
+- type: JSONSchema
+  url: json-schema/amazon-resource-explorer-openapi-search-response-schema.json
+- type: JSONSchema
+  url: json-schema/amazon-resource-explorer-openapi-view-schema.json
+- type: JSONStructure
+  url: json-structure/amazon-resource-explorer-openapi-index-structure.json
+- type: JSONStructure
+  url: json-structure/amazon-resource-explorer-openapi-resource-structure.json
+- type: JSONStructure
+  url: json-structure/amazon-resource-explorer-openapi-search-request-structure.json
+- type: JSONStructure
+  url: json-structure/amazon-resource-explorer-openapi-search-response-structure.json
+- type: JSONStructure
+  url: json-structure/amazon-resource-explorer-openapi-view-structure.json
+- type: Examples
+  url: examples/amazon-resource-explorer-openapi-index-example.json
+- type: Examples
+  url: examples/amazon-resource-explorer-openapi-resource-example.json
+- type: Examples
+  url: examples/amazon-resource-explorer-openapi-search-request-example.json
+- type: Examples
+  url: examples/amazon-resource-explorer-openapi-search-response-example.json
+- type: Examples
+  url: examples/amazon-resource-explorer-openapi-view-example.json
+- type: SpectralRules
+  url: rules/amazon-resource-explorer-spectral-rules.yml
+- type: Vocabulary
+  url: vocabulary/amazon-resource-explorer-vocabulary.yaml
+- type: OpenAPI
+  url: openapi/_original/amazon-resource-explorer-openapi.yml
+- type: Integrations
+  url: https://aws.amazon.com/partners/
 integrations:
-  - name: Partner Programs
-  - name: Resources
-  - name: Success Stories
-  - name: Work with an AWS Partner
-  - name: AWS Marketplace
-  - name: AWS Partner Central
-  - name: Partner Paths
-  - name: co-sell with AWS
+- name: Partner Programs
+- name: Resources
+- name: Success Stories
+- name: Work with an AWS Partner
+- name: AWS Marketplace
+- name: AWS Partner Central
+- name: Partner Paths
+- name: co-sell with AWS
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
 x-parent: aws
 x-relationship: product
