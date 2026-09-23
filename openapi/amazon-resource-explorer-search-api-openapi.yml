@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Amazon Resource Explorer Index Search API
+  title: Amazon Resource Explorer Search API
   description: AWS Resource Explorer is a resource search and discovery service that provides a unified view of your AWS resources across Regions.
   version: 2022-07-28
   contact:

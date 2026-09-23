@@ -1,11 +1,7 @@
 {
   "provider": "amazon-resource-explorer",
   "sources": [
-    "amazon-resource-explorer-index-api-openapi.yml",
-    "amazon-resource-explorer-resources-api-openapi.yml",
-    "amazon-resource-explorer-search-api-openapi.yml",
-    "amazon-resource-explorer-tags-api-openapi.yml",
-    "amazon-resource-explorer-views-api-openapi.yml"
+    "_original/amazon-resource-explorer-openapi.yml"
   ],
   "outputs": [
     "amazon-resource-explorer-index-api-openapi.yml",
@@ -18,7 +14,20 @@
   "errors": [],
   "warnings": [],
   "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "amazon-resource-explorer-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "amazon-resource-explorer-openapi.yml: declared missing tag: Index",
+    "amazon-resource-explorer-openapi.yml: declared missing tag: Resources",
+    "amazon-resource-explorer-openapi.yml: declared missing tag: Search",
+    "amazon-resource-explorer-openapi.yml: declared missing tag: Tags",
+    "amazon-resource-explorer-openapi.yml: declared missing tag: Views",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "amazon-resource-explorer-index-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-resource-explorer-resources-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-resource-explorer-search-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-resource-explorer-tags-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-resource-explorer-views-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
