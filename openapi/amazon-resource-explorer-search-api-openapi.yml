@@ -42,6 +42,28 @@ paths:
                 $ref: '#/components/schemas/SearchResponse'
 components:
   schemas:
+    Resource:
+      type: object
+      properties:
+        Arn:
+          type: string
+          description: The Amazon Resource Name (ARN) of the resource.
+        LastReportedAt:
+          type: string
+          format: date-time
+          description: The date and time the resource was last updated.
+        OwningAccountId:
+          type: string
+          description: The AWS account ID of the account that owns the resource.
+        Region:
+          type: string
+          description: The AWS Region where the resource exists.
+        ResourceType:
+          type: string
+          description: The type of the resource.
+        Service:
+          type: string
+          description: The AWS service that owns the resource.
     SearchResponse:
       type: object
       properties:
@@ -75,28 +97,6 @@ components:
         ViewArn:
           type: string
           description: The ARN of the view to search.
-    Resource:
-      type: object
-      properties:
-        Arn:
-          type: string
-          description: The Amazon Resource Name (ARN) of the resource.
-        LastReportedAt:
-          type: string
-          format: date-time
-          description: The date and time the resource was last updated.
-        OwningAccountId:
-          type: string
-          description: The AWS account ID of the account that owns the resource.
-        Region:
-          type: string
-          description: The AWS Region where the resource exists.
-        ResourceType:
-          type: string
-          description: The type of the resource.
-        Service:
-          type: string
-          description: The AWS service that owns the resource.
   securitySchemes:
     sigv4:
       type: apiKey
