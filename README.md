@@ -1,4 +1,4 @@
-# Amazon Resource Explorer (amazon-resource-explorer)
+# Amazon Resource Explorer
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,91 +66,191 @@
 
 AWS Resource Explorer is a resource search and discovery service. With Resource Explorer, you can explore your resources across AWS Regions using an internet search-like experience. It provides a unified view of your AWS resources and helps you understand your resource inventory.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/amazon-resource-explorer/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/amazon-resource-explorer/refs/heads/main/apis.yml)
+**Areas:** AWS · Discovery · Inventory · Resource Management
 
-## Scope
+## Amazon Resource Explorer on APIs.io
 
-- **Type:** Index
+Everything profiled for Amazon Resource Explorer is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-resource-explorer/](https://apis.io/providers/amazon-resource-explorer/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (6)
 
-- AWS
-- Discovery
-- Inventory
-- Operations
-- Resource Management
+- [Amazon Resource Explorer Index API](https://apis.io/apis/amazon-resource-explorer/amazon-resource-explorer-index-api/) — The Index API from Amazon Resource Explorer — 4 operation(s) for index.
+- [Amazon Resource Explorer Resources API](https://apis.io/apis/amazon-resource-explorer/amazon-resource-explorer-resources-api/) — The Resources API from Amazon Resource Explorer — 1 operation(s) for resources.
+- [Amazon Resource Explorer Search API](https://apis.io/apis/amazon-resource-explorer/amazon-resource-explorer-search-api/) — The Search API from Amazon Resource Explorer — 1 operation(s) for search.
+- [Amazon Resource Explorer Tags API](https://apis.io/apis/amazon-resource-explorer/amazon-resource-explorer-tags-api/) — The Tags API from Amazon Resource Explorer — 3 operation(s) for tags.
+- [Amazon Resource Explorer Views API](https://apis.io/apis/amazon-resource-explorer/amazon-resource-explorer-views-api/) — The Views API from Amazon Resource Explorer — 5 operation(s) for views.
+- [Amazon Resource Explorer Resource Explorer Operations API](https://apis.io/apis/amazon-resource-explorer/amazon-resource-explorer-operations-api/) — The Resource Explorer Operations API from Amazon Resource Explorer — 18 operation(s) for resource explorer operations.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### AWS Resource Explorer API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The AWS Resource Explorer API provides programmatic access to search and discover AWS resources across Regions, manage indexes, views, and resource type configurations for your AWS account.
+- [Amazon Resource Explorer Agentic Access](https://apis.io/agentic-access/amazon-resource-explorer/amazon-resource-explorer-agentic-access/)
 
-- **Human URL:** [https://aws.amazon.com/resourceexplorer/](https://aws.amazon.com/resourceexplorer/)
-- **Base URL:** `https://resource-explorer-2.amazonaws.com`
+#### JSON Schema (5)
 
-#### Tags
+The data models the API reads and writes.
 
-- Discovery
-- Inventory
-- Resource Management
+- [Index](https://apis.io/schemas/amazon-resource-explorer/amazon-resource-explorer-openapi-index/)
+- [Resource](https://apis.io/schemas/amazon-resource-explorer/amazon-resource-explorer-openapi-resource/)
+- [SearchRequest](https://apis.io/schemas/amazon-resource-explorer/amazon-resource-explorer-openapi-search-request/)
+- [SearchResponse](https://apis.io/schemas/amazon-resource-explorer/amazon-resource-explorer-openapi-search-response/)
+- [View](https://apis.io/schemas/amazon-resource-explorer/amazon-resource-explorer-openapi-view/)
 
-#### Properties
+#### JSON Structure (5)
 
-- [Documentation](https://docs.aws.amazon.com/resource-explorer/latest/apireference/Welcome.html)
-- [OpenAPI](https://api.apis.guru/v2/specs/amazonaws.com/resource-explorer-2/2022-07-28/openapi.yaml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Getting Started](https://aws.amazon.com/resourceexplorer/getting-started/)
-- [Pricing](https://aws.amazon.com/resourceexplorer/pricing/)
-- [F A Q](https://aws.amazon.com/resourceexplorer/faqs/)
-- [Postman Collection](collections/amazon-resource-explorer.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/amazon-resource-explorer.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Data models expressed in JSON Structure.
 
-## Common Properties
+- [Amazon Resource Explorer Openapi Index Structure](https://apis.io/json-structure/amazon-resource-explorer/amazon-resource-explorer-openapi-index-structure/)
+- [Amazon Resource Explorer Openapi Resource Structure](https://apis.io/json-structure/amazon-resource-explorer/amazon-resource-explorer-openapi-resource-structure/)
+- [Amazon Resource Explorer Openapi Search Request Structure](https://apis.io/json-structure/amazon-resource-explorer/amazon-resource-explorer-openapi-search-request-structure/)
+- [Amazon Resource Explorer Openapi Search Response Structure](https://apis.io/json-structure/amazon-resource-explorer/amazon-resource-explorer-openapi-search-response-structure/)
+- [Amazon Resource Explorer Openapi View Structure](https://apis.io/json-structure/amazon-resource-explorer/amazon-resource-explorer-openapi-view-structure/)
 
-- [Portal](https://aws.amazon.com/resourceexplorer/)
-- [Portal](https://aws.amazon.com/resourceexplorer/)
+#### JSON-LD (5)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Resource Explorer Openapi Index Context](https://apis.io/jsonld/amazon-resource-explorer/amazon-resource-explorer-openapi-index-context/)
+- [Amazon Resource Explorer Openapi Resource Context](https://apis.io/jsonld/amazon-resource-explorer/amazon-resource-explorer-openapi-resource-context/)
+- [Amazon Resource Explorer Openapi Search Request Context](https://apis.io/jsonld/amazon-resource-explorer/amazon-resource-explorer-openapi-search-request-context/)
+- [Amazon Resource Explorer Openapi Search Response Context](https://apis.io/jsonld/amazon-resource-explorer/amazon-resource-explorer-openapi-search-response-context/)
+- [Amazon Resource Explorer Openapi View Context](https://apis.io/jsonld/amazon-resource-explorer/amazon-resource-explorer-openapi-view-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Resource Explorer Vocabulary](https://apis.io/vocabularies/amazon-resource-explorer/amazon-resource-explorer-vocabulary/)
+
+#### Examples (5)
+
+Example requests and responses.
+
+- [Amazon Resource Explorer Openapi Index Example](https://apis.io/examples/amazon-resource-explorer/amazon-resource-explorer-openapi-index-example/)
+- [Amazon Resource Explorer Openapi Resource Example](https://apis.io/examples/amazon-resource-explorer/amazon-resource-explorer-openapi-resource-example/)
+- [Amazon Resource Explorer Openapi Search Request Example](https://apis.io/examples/amazon-resource-explorer/amazon-resource-explorer-openapi-search-request-example/)
+- [Amazon Resource Explorer Openapi Search Response Example](https://apis.io/examples/amazon-resource-explorer/amazon-resource-explorer-openapi-search-response-example/)
+- [Amazon Resource Explorer Openapi View Example](https://apis.io/examples/amazon-resource-explorer/amazon-resource-explorer-openapi-view-example/)
+
+#### Collections (11)
+
+Postman and Open Collection request collections.
+
+- [Amazon Resource Explorer API](https://apis.io/collections/amazon-resource-explorer/open-amazon-resource-explorer/)
+- [Amazon Resource Explorer Index API](https://apis.io/collections/amazon-resource-explorer/open-amazon-resource-explorer-index-api/)
+- [Amazon Resource Explorer Index Resources API](https://apis.io/collections/amazon-resource-explorer/open-amazon-resource-explorer-resources-api/)
+- [Amazon Resource Explorer Index Search API](https://apis.io/collections/amazon-resource-explorer/open-amazon-resource-explorer-search-api/)
+- [Amazon Resource Explorer Index Tags API](https://apis.io/collections/amazon-resource-explorer/open-amazon-resource-explorer-tags-api/)
+- [Amazon Resource Explorer Index Views API](https://apis.io/collections/amazon-resource-explorer/open-amazon-resource-explorer-views-api/)
+- [Amazon Resource Explorer Index API](https://apis.io/collections/amazon-resource-explorer/postman-amazon-resource-explorer-index-api/)
+- [Amazon Resource Explorer Index Resources API](https://apis.io/collections/amazon-resource-explorer/postman-amazon-resource-explorer-resources-api/)
+- [Amazon Resource Explorer Index Search API](https://apis.io/collections/amazon-resource-explorer/postman-amazon-resource-explorer-search-api/)
+- [Amazon Resource Explorer Index Tags API](https://apis.io/collections/amazon-resource-explorer/postman-amazon-resource-explorer-tags-api/)
+- [Amazon Resource Explorer Index Views API](https://apis.io/collections/amazon-resource-explorer/postman-amazon-resource-explorer-views-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon Resource Explorer — jsonschema rules](https://apis.io/rules/amazon-resource-explorer/amazon-resource-explorer-jsonschema-spectral-rules/)
+- [Amazon Resource Explorer API Rules](https://apis.io/rules/amazon-resource-explorer/amazon-resource-explorer-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Resource Explorer Authentication](https://apis.io/security/amazon-resource-explorer/amazon-resource-explorer-authentication/)
+- [Amazon Resource Explorer Domain Security](https://apis.io/security/amazon-resource-explorer/amazon-resource-explorer-domain-security/)
+- [Amazon Resource Explorer Trust Center](https://apis.io/security/amazon-resource-explorer/amazon-resource-explorer-trust-center/)
+- [Amazon Resource Explorer Vulnerability Disclosure](https://apis.io/security/amazon-resource-explorer/amazon-resource-explorer-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Amazon Resource Explorer Plans Pricing](https://apis.io/plans/amazon-resource-explorer/amazon-resource-explorer-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Amazon Resource Explorer Rate Limits](https://apis.io/rate-limits/amazon-resource-explorer/amazon-resource-explorer-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Amazon Resource Explorer Finops](https://apis.io/finops/amazon-resource-explorer/amazon-resource-explorer-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://aws.amazon.com/resourceexplorer/)
 - [Documentation](https://docs.aws.amazon.com/resource-explorer/)
-- [Terms of Service](https://aws.amazon.com/service-terms/)
-- [Privacy Policy](https://aws.amazon.com/privacy/)
 - [Support](https://aws.amazon.com/premiumsupport/)
 - [Blog](https://aws.amazon.com/blogs/mt/tag/aws-resource-explorer/)
-- [GitHub Organization](https://github.com/aws)
-- [Portal](https://console.aws.amazon.com/resource-explorer/)
-- [Sign Up](https://portal.aws.amazon.com/billing/signup)
-- [Login](https://signin.aws.amazon.com/)
-- [Status Page](https://health.aws.amazon.com/health/status)
-- [Contact](https://aws.amazon.com/contact-us/)
-- [JSON-LD](json-ld/amazon-resource-explorer-openapi-index-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [JSON-LD](json-ld/amazon-resource-explorer-openapi-resource-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [JSON-LD](json-ld/amazon-resource-explorer-openapi-search-request-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [JSON-LD](json-ld/amazon-resource-explorer-openapi-search-response-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [JSON-LD](json-ld/amazon-resource-explorer-openapi-view-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [JSON Schema](json-schema/amazon-resource-explorer-openapi-index-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-resource-explorer-openapi-resource-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-resource-explorer-openapi-search-request-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-resource-explorer-openapi-search-response-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-resource-explorer-openapi-view-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Structure](json-structure/amazon-resource-explorer-openapi-index-structure.json)
-- [JSON Structure](json-structure/amazon-resource-explorer-openapi-resource-structure.json)
-- [JSON Structure](json-structure/amazon-resource-explorer-openapi-search-request-structure.json)
-- [JSON Structure](json-structure/amazon-resource-explorer-openapi-search-response-structure.json)
-- [JSON Structure](json-structure/amazon-resource-explorer-openapi-view-structure.json)
-- [Example](examples/amazon-resource-explorer-openapi-index-example.json)
-- [Example](examples/amazon-resource-explorer-openapi-resource-example.json)
-- [Example](examples/amazon-resource-explorer-openapi-search-request-example.json)
-- [Example](examples/amazon-resource-explorer-openapi-search-response-example.json)
-- [Example](examples/amazon-resource-explorer-openapi-view-example.json)
-- [Spectral Rules](rules/amazon-resource-explorer-spectral-rules.yml)
-- [Vocabulary](vocabulary/amazon-resource-explorer-vocabulary.yaml)
-- [OpenAPI](openapi/amazon-resource-explorer-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Integrations](https://aws.amazon.com/partners/)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 47.9** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 54.5 |
+| Contract governance | 27.3 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 36.9 |
+| Access clarity | 53.9 |
+
+**Agent readiness 20.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-resource-explorer/](https://apis.io/providers/amazon-resource-explorer/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon Resource Explorer: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-resource-explorer/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
