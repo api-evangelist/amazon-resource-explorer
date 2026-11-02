@@ -1,0 +1,40 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-28'
+method: searched
+source: https://aws.amazon.com/resourceexplorer/pricing/
+sources:
+- https://aws.amazon.com/resourceexplorer/pricing/
+provenance:
+  tool: engine/economics/harvest_pricing.py
+  run: 20261028T161713
+  grounding: every price_text was found verbatim in the fetched page text
+audience: developer-api
+pricing_basis: free
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-28'
+published: false
+note: Page states the service is free with no numeric prices; related services billed separately.
+plan_count: 1
+plans:
+- name: AWS Resource Explorer
+  price_text: AWS Resource Explorer is offered at no additional charge.
+  period: none
+  included_quota: No set-up fees or upfront commitments
+  overage: Dependent services such as AWS Config are billed separately; charges may apply for List or
+    Describe API calls of called services
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - metered
+  units: []
+  plans:
+  - name: AWS Resource Explorer
+    access: other
+    model: metered
+    model_how: derived
+    units: []
+    periods:
+    - none
