@@ -2,6 +2,7 @@
 generated: '2026-10-28'
 method: searched
 source: https://aws.amazon.com/resourceexplorer/pricing/
+name: Amazon Resource Explorer API Plans
 sources:
 - https://aws.amazon.com/resourceexplorer/pricing/
 provenance:
@@ -25,7 +26,7 @@ plans:
   overage: Dependent services such as AWS Config are billed separately; charges may apply for List or
     Describe API calls of called services
 x-canonical:
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - metered

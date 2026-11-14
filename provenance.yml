@@ -5,8 +5,23 @@ artifacts:
   agentic-access/amazon-resource-explorer-agentic-access.yml:
     method: generated
     evidence: declared in the artifact
+  ai-preferences/amazon-resource-explorer-ai-preferences.yml:
+    method: harvested
+    evidence: declared in the artifact
   authentication/amazon-resource-explorer-authentication.yml:
     method: derived
+    evidence: declared in the artifact
+  certification/observations-2026-11-11.jsonl:
+    method: unknown
+    evidence: no authorship recorded
+  certification/status.yml:
+    method: unknown
+    evidence: no authorship recorded
+  changelog/amazon-resource-explorer-changelog.yml:
+    method: searched
+    evidence: declared in the artifact
+  cli/amazon-resource-explorer-cli.yml:
+    method: searched
     evidence: declared in the artifact
   collections/amazon-resource-explorer-index-api.opencollection.json:
     method: derived
@@ -44,6 +59,24 @@ artifacts:
   collections/amazon-resource-explorer.postman_collection.json:
     method: derived
     evidence: openapi/amazon-resource-explorer
+  compliance/amazon-resource-explorer-compliance.yml:
+    method: harvested
+    evidence: declared in the artifact
+  conformance/amazon-resource-explorer-conformance.yml:
+    method: derived
+    evidence: declared in the artifact
+  conventions/amazon-resource-explorer-conventions.yml:
+    method: derived
+    evidence: declared in the artifact
+  data-model/amazon-resource-explorer-data-model.yml:
+    method: derived
+    evidence: declared in the artifact
+  eligibility/amazon-resource-explorer-eligibility.yml:
+    method: harvested
+    evidence: declared in the artifact
+  errors/amazon-resource-explorer-problem-types.yml:
+    method: derived
+    evidence: declared in the artifact
   examples/amazon-resource-explorer-openapi-index-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -65,10 +98,16 @@ artifacts:
   front-door-ai/2026-09-17.yml:
     method: unknown
     evidence: no authorship recorded
+  hosts/amazon-resource-explorer-hosts.yml:
+    method: derived
+    evidence: declared in the artifact
   integrations/_index.yml:
     method: generated
     evidence: carries an API Evangelist house phrase
   integrations/amazon-resource-explorer-integration-edges.yml:
+    method: unknown
+    evidence: no authorship recorded
+  json-ld/amazon-resource-explorer-context.jsonld:
     method: unknown
     evidence: no authorship recorded
   json-ld/amazon-resource-explorer-openapi-index-context.jsonld:
@@ -86,6 +125,72 @@ artifacts:
   json-ld/amazon-resource-explorer-openapi-view-context.jsonld:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-batch-get-view-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-batch-get-view-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-create-index-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-create-index-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-create-resource-explorer-setup-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-create-view-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-delete-index-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-get-index-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-get-view-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-list-indexes-for-members-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-list-indexes-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-list-indexes-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-list-managed-views-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-list-resources-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-list-streaming-access-for-services-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-list-streaming-access-for-services-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-list-supported-resource-types-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-list-supported-resource-types-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-list-tags-for-resource-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-list-tags-for-resource-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-list-views-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-list-views-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-resource-explorer-openapi-index-schema.json:
     method: unknown
     evidence: no authorship recorded
@@ -99,6 +204,24 @@ artifacts:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-resource-explorer-openapi-view-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-search-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-search-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-tag-resource-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-tag-resource-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-untag-resource-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-resource-explorer-untag-resource-output-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-structure/amazon-resource-explorer-openapi-index-structure.json:
@@ -119,7 +242,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-11-02T082323.yml:
+  kin/checks-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -188,28 +311,45 @@ artifacts:
   kin/score-2026-11-02T082323.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  openapi/_original/amazon-resource-explorer-openapi.yml:
-    method: harvested
-    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
-      to the provider's source is unverified
-  openapi/amazon-resource-explorer-index-api-openapi.yml:
+  kin/score-2026-11-06T143934.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  lifecycle/amazon-resource-explorer-lifecycle.yml:
+    method: searched
+    evidence: declared in the artifact
+  llms/amazon-resource-explorer-llms-provenance.yml:
+    method: unknown
+    evidence: no authorship recorded
+  llms/amazon-resource-explorer-llms.txt:
+    method: unknown
+    evidence: no authorship recorded
+  mcp/amazon-resource-explorer-mcp.yml:
     method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+    evidence: declared in the artifact
+  openapi/amazon-resource-explorer-index-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
   openapi/amazon-resource-explorer-operations-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
   openapi/amazon-resource-explorer-resources-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+    method: unknown
+    evidence: no authorship recorded
   openapi/amazon-resource-explorer-search-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+    method: unknown
+    evidence: no authorship recorded
   openapi/amazon-resource-explorer-tags-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
   openapi/amazon-resource-explorer-views-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  packages/amazon-resource-explorer-packages.yml:
+    method: searched
+    evidence: declared in the artifact
+  patterns/amazon-resource-explorer-patterns.yml:
     method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+    evidence: declared in the artifact
   plans/amazon-resource-explorer-plans-pricing.yml:
     method: searched
     evidence: declared in the artifact
@@ -228,10 +368,16 @@ artifacts:
   postman/amazon-resource-explorer-views-api.postman_collection.json:
     method: derived
     evidence: openapi/amazon-resource-explorer-views-api
+  privacy/amazon-resource-explorer-privacy-policy.yml:
+    method: harvested
+    evidence: declared in the artifact
   rate-limits/amazon-resource-explorer-rate-limits.yml:
-    method: generated
+    method: searched
     evidence: declared in the artifact
   rules/amazon-resource-explorer-jsonschema-spectral-rules.yml:
+    method: generated
+    evidence: declared in the artifact
+  rules/amazon-resource-explorer-rules.yml:
     method: generated
     evidence: declared in the artifact
   rules/amazon-resource-explorer-spectral-rules.yml:
@@ -250,8 +396,27 @@ artifacts:
     method: generated
     evidence: declared in the artifact
   smithy/resource-explorer-2-2022-07-28.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/resource-explorer-2/service/2022-07-28/resource-explorer-2-2022-07-28.json
+      (sha256 b2918cfe1a52, fetched 2026-11-11T21:14:39+00:00)
+  terms/amazon-resource-explorer-terms-of-service.yml:
+    method: harvested
+    evidence: declared in the artifact
+  vendors/amazon-resource-explorer-vendors.yml:
     method: unknown
     evidence: no authorship recorded
   vocabulary/amazon-resource-explorer-vocabulary.yaml:
+    method: unknown
+    evidence: no authorship recorded
+  vocabulary/amazon-resource-explorer-vocabulary.yml:
+    method: derived
+    evidence: declared in the artifact
+  well-known/amazon-resource-explorer-midway-auth-openid-configuration.json:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-resource-explorer-security.txt:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-resource-explorer-well-known.yml:
     method: unknown
     evidence: no authorship recorded
